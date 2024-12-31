@@ -1,5 +1,3 @@
-# script.py
-
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split, GridSearchCV
@@ -43,7 +41,7 @@ def create_target(row):
     conditions_remplies = sum(conditions)
     return int(conditions_remplies >= 3)
 
-# Appliquer la fonction pour créer la colonne 'target'
+# Fonction pour créer la colonne 'target'
 data['target'] = data.apply(create_target, axis=1)
 
 # Phase 2: Visualisation des données et sélection du modèle
